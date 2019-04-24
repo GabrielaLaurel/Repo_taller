@@ -51,6 +51,8 @@ public class RecaudacionesJSON implements Serializable {
     private Tipo tipo;
 
     private Ubicacion ubicacion;
+    
+    private String defuncion;
 
     public RecaudacionesJSON() {
     }
@@ -210,7 +212,13 @@ public class RecaudacionesJSON implements Serializable {
     public void setUbicacion(Ubicacion ubicacion) {
         this.ubicacion = ubicacion;
     }
-
+    
+    public String getDefuncion() {
+    	return defuncion;
+    }
+    public void setDefuncion(String defuncion) {
+    	this.defuncion =defuncion;
+    }
 	@Override
 	public int hashCode() {
 		final int prime = 31;
