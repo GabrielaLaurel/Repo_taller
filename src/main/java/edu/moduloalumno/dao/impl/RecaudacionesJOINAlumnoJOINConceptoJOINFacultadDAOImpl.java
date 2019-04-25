@@ -184,7 +184,7 @@ public class RecaudacionesJOINAlumnoJOINConceptoJOINFacultadDAOImpl implements I
 		"r.numero, f.nombre,  m.id_moneda, m.moneda, r.importe, " +  
 		"COALESCE( s.fecha_equiv,r.fecha) as fecha,ap.anio_ingreso, " +  
 		"p.nom_programa, p.id_programa,p.sigla_programa, " +  
-		"r.cod_alumno, r.observacion " +  
+		"r.cod_alumno, r.observacion, ap.defuncion " +  
 		"from recaudaciones r " +  
 		"inner join registro_carga rc on (rc.id_registro = r.id_registro) " +
 		"inner join alumno_programa ap on (ap.cod_alumno = r.cod_alumno) " +

@@ -44,6 +44,8 @@ public class RecaudacionesJOINAlumnoJOINConceptoJOINFacultad {
     
     private String estado;
     
+    private String defuncion;
+    
     public String getEstado() {
 		return estado;
 	}
@@ -99,7 +101,16 @@ public class RecaudacionesJOINAlumnoJOINConceptoJOINFacultad {
 	public String getDni() {
 		return dni;
 	}
-
+	
+	public String getDefuncion()
+	{	
+		return defuncion;
+	}
+	
+	public void setDefuncion(String defuncion) {
+		this.defuncion = defuncion;
+	}
+	
 	public void setDni(String dni) {
 		this.dni = dni;
 	}
