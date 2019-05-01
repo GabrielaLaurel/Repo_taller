@@ -21,6 +21,7 @@ public class CodigosporNomApeRowMapper implements RowMapper<CodigosporNomApe> {
 				codigosporNomApe.setCod_alumno(row.getString("cod_alumno"));
                 codigosporNomApe.setNombre_alumno(row.getString("nombre_alumno"));
                 codigosporNomApe.setNombre_programa(row.getString("nombre_programa"));
+                codigosporNomApe.setNombre_programa(row.getString("defuncion"));
 		return codigosporNomApe;
 	}
     

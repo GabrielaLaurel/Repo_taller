@@ -14,16 +14,18 @@ public class CodigosporNomApe {
     private String cod_alumno;
     private String nombre_alumno;
     private String nombre_programa;
+    private String defuncion;
     
     public CodigosporNomApe() {
         super();
     }
     
-    public CodigosporNomApe(String cod_alumno, String nombre_alumno, String nombre_programa) {
+    public CodigosporNomApe(String cod_alumno, String nombre_alumno, String nombre_programa, String defuncion) {
         super();
         this.cod_alumno = cod_alumno;
         this.nombre_alumno = nombre_alumno;
         this.nombre_programa = nombre_programa;
+        this.defuncion = defuncion;
     }
     
 
@@ -50,6 +52,13 @@ public class CodigosporNomApe {
     public void setNombre_programa(String nombre_programa) {
         this.nombre_programa = nombre_programa;
     }
-
+    
+    public String getDefuncion() {
+    	return defuncion;
+    }
+    public void setDefuncion(String defuncion) {
+    	this.defuncion = defuncion;
+    }
+    
     
 }
