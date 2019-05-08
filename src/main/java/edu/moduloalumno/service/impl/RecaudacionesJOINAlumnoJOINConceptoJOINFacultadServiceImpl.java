@@ -175,6 +175,12 @@ public class RecaudacionesJOINAlumnoJOINConceptoJOINFacultadServiceImpl implemen
 	public int updateRecaudacionesCodAlumni(Integer id_rec, String cod_alumno) {
 		return recaudacionesJOINAlumnoJOINConceptoJOINFacultadDAO.updateRecaudacionesCodAlumno(id_rec, cod_alumno);
 	}
+
+	@Override
+	public int updateAlumnoDefuncion(String codigo, int defuncion) {
+		// TODO Auto-generated method stub
+		return recaudacionesJOINAlumnoJOINConceptoJOINFacultadDAO.updateAlumnoDefuncion(codigo, defuncion);
+	}
 	
 	
 	

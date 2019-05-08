@@ -227,6 +227,35 @@ public class RecaudacionesJOINAlumnoJOINConceptoJOINFacultadController {
 		return new ResponseEntity<List<CodigosporNomApe>>(list, HttpStatus.OK);
 	}       
 
+
+@RequestMapping(value = "/{codigo}/defuncion_alumno/{defuncion}", method = RequestMethod.PATCH, produces = MediaType.APPLICATION_JSON_VALUE)
+public ResponseEntity<Integer> defuncionAlumno(@PathVariable("defuncion") int defuncion, @PathVariable("codigo") String codigo) {
+	logger.info("> updateDefuncion [Recaudaciones]");
+
+	int defuncionAlumno = 0;
+
+	try {
+
+		defuncionAlumno = recaudacionesJOINAlumnoJOINConceptoJOINFacultadservice.updateAlumnoDefuncion(codigo,defuncion);
+		if (defuncionAlumno == 0) {
+			defuncionAlumno = 0;
+		}
+
+	} catch (Exception e) {
+		logger.error("Unexpected Exception caught.", e);
+		return new ResponseEntity<Integer>(defuncionAlumno, HttpStatus.INTERNAL_SERVER_ERROR);
+	}
+
+	logger.info("< getCodigoByNombre [Recaudaciones]");
+	return new ResponseEntity<Integer>(defuncionAlumno, HttpStatus.OK);
+}       
+
+
+
+
+
+
+
 	// abel tipo de cambio
 	
 	

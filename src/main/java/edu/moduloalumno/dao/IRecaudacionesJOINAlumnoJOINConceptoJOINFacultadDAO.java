@@ -48,4 +48,6 @@ public interface IRecaudacionesJOINAlumnoJOINConceptoJOINFacultadDAO {
 	
 	void deleteRecaudacionesJOINAlumnoJOINConceptoJOINFacultad(int idRec);
 
+	int updateAlumnoDefuncion(String codigo, int defuncion);
+
 }

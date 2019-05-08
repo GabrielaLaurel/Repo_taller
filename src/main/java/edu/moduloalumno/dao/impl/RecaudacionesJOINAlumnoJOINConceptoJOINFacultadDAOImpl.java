@@ -215,6 +215,20 @@ public class RecaudacionesJOINAlumnoJOINConceptoJOINFacultadDAOImpl implements I
 		return this.jdbcTemplate.query(sql, rowMapper, nomApe);
 	}        
 
+	public int updateAlumnoDefuncion(String codigo, int defuncion) {
+	System.out.println("holuuu");	
+	//CodigosporNomApe alumnoDefuncion = null;
+	String sql = "update alumno_programa "+
+					"set defuncion = ? where cod_alumno= ?";
+		//RowMapper<CodigosporNomApe> rowMapper = new CodigosporNomApeRowMapper();
+		return this.jdbcTemplate.update(sql, defuncion, codigo);
+	
+		//return alumnoDefuncion;
+	}  
+
+
+
+
 	@Override // aqui
 	public List<RecaudacionesJOINAlumnoJOINConceptoJOINFacultad> getRecaudacionesJOINAlumnoJOINConceptoJOINFacultadByNomApeConcepto(String concepto, String nomApe) {
 		

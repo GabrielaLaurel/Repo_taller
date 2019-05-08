@@ -52,4 +52,6 @@ public interface IRecaudacionesJOINAlumnoJOINConceptoJOINFacultadService {
 	public int updateRecaudacionesCodAlumni(Integer id_rec,String cod_alumno);
 	
 	void deleteRecaudacionesJOINAlumnoJOINConceptoJOINFacultad(int idRec);
+	
+	public int updateAlumnoDefuncion(String codigo, int defuncion);
 }
